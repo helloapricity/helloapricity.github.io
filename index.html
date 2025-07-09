@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./assets/favicon.png" type="image/png">
+    <title>Anh Thach Ha Nguyen - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container">
+            <h1 class="site-title">Anh Thach Ha Nguyen</h1>
+            <nav class="site-nav">
+                <a href="./assets/AnhThachHaNguyen_CV.pdf" target="_blank">CV</a>
+                <a href="#aboutme">About Me</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#publications">Publications</a>
+                <a href="#contact">Contact</a>
+                <button id="dark-mode-toggle" aria-label="Toggle Dark Mode">🌙</button>
+            </nav>
+        </div>
+    </header>
+
+    <div class="profile" id="aboutme">
+        <img src="./assets/profile.jpg" alt="Anh Nguyen" class="profile-img" />
+        <h1>Hi, I'm Anh Thach Ha Nguyen (Apricity) 👋</h1>
+        <div class="typewriter-wrapper">
+            <p class="tagline" id="typewriter"></p>
+            <span class="cursor">|</span>
+        </div>
+
+        <p>I’m currently pursuing a Master’s degree in AI, focusing on LLMs and deep learning. My goal is to apply these
+            techniques to extract insights from financial data and build robust signal-driven models. I’m a curious
+            researcher who thrives on solving complex problems and learning from experimentation.</p>
+    </div>
+
+    <div class="cta-buttons">
+        <a href="#projects" class="btn">📁 View Projects</a>
+        <!-- TODO: -->
+        <a href="./assets/AnhThachHaNguyen_CV.pdf" class="btn" target="_blank">📄 View CV (PDF)</a>
+        <a href="https://github.com/helloapricity" class="btn" target="_blank">🌐 GitHub Profile</a>
+    </div>
+
+    <section id="about">
+        <h2>👤 About Me</h2>
+        <div class="timeline">
+
+            <div class="timeline-item left">
+                <div class="timeline-content">
+                    <h3>2025 – Present</h3>
+                    <p>🎓 Pursuing Master’s degree in Artificial Intelligence at University of Science (HCMUS). Focus on
+                        LLMs, Time Series Forecasting, and Reinforcement Learning for Finance.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item right">
+                <div class="timeline-content">
+                    <h3>2021 – 2025</h3>
+                    <p>📘 Studied Artificial Intelligence (B.Sc.) at FPT University, Ho Chi Minh City. Gained solid
+                        foundations in machine learning, deep learning, and algorithmic thinking, with hands-on
+                        experience in AI applications.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item left">
+                <div class="timeline-content">
+                    <h3>My Research Interests</h3>
+                    <p>🧠 LLMs, Time Series Modeling, RLHF, Quantitative Finance, Signal Modeling, Autonomous Agents for
+                        Finance.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item right">
+                <div class="timeline-content career-goal">
+                    <h3>Career Goal</h3>
+                    <p>🚀 I aim to develop AI models that understand and optimize global financial strategies through
+                        research, experimentation, and impact-driven innovation.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>🛠️ Skills</h2>
+
+        <div class="skill-category">
+            <h3>AI / ML / LLM</h3>
+            <ul>
+                <li>PyTorch ✦✦✦✦✧</li>
+                <li>Transformers (HF) ✦✦✦✦✧</li>
+                <li>RAG / LangChain ✦✦✦✧✧</li>
+            </ul>
+        </div>
+
+        <div class="skill-category">
+            <h3>Data & Dev</h3>
+            <ul>
+                <li>Pandas / NumPy ✦✦✦✦✧</li>
+                <li>Git / Docker ✦✦✦✧✧</li>
+                <li>REST API ✦✦✧✧✧</li>
+            </ul>
+        </div>
+
+        <div class="skill-category">
+            <h3>Programming</h3>
+            <ul>
+                <li>Python ✦✦✦✦✦</li>
+                <li>C++ ✦✦✧✧✧</li>
+                <li>Bash ✦✦✧✧✧</li>
+            </ul>
+        </div>
+
+        <div class="skill-category">
+            <h3>Maths / Statistics</h3>
+            <ul>
+                <li>Optimization ✦✦✦✧✧</li>
+                <li>Probability ✦✦✦✦✧</li>
+                <li>Linear Algebra ✦✦✦✦✧</li>
+            </ul>
+        </div>
+
+        <div class="skill-category">
+            <h3>Quant Finance</h3>
+            <ul>
+                <li>Alpha Modeling ✦✦✧✧✧</li>
+                <li>Time Series Analysis ✦✦✦✧✧</li>
+                <li>Backtesting ✦✦✧✧✧</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>📌 Featured Projects</h2>
+
+        <div class="project-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="llm">LLM</button>
+            <button class="filter-btn" data-filter="rl">RL</button>
+            <button class="filter-btn" data-filter="nlp">NLP</button>
+            <button class="filter-btn" data-filter="quant">Quant</button>
+        </div>
+
+        <div class="projects-grid">
+
+            <!-- Project 1 -->
+            <div class="project-card llm nlp quant" data-aos="fade-up">
+                <h3>📊 Financial Text Signal Generator</h3>
+                <img src="./assets/projects/rl-agent.png" alt="RL Agent" class="project-thumbnail" />
+                <p>Fine-tuned GPT-2 to generate market sentiment signals from financial news headlines.</p>
+                <ul>
+                    <li><strong>Stack:</strong> Python, HuggingFace, yFinance, GPT-2</li>
+                    <li><strong>Best Result:</strong> ROUGE-L = 0.68, BLEU = 0.42</li>
+                </ul>
+                <div class="project-links">
+                    <a href="https://github.com/helloapricity/fintext-gpt2" target="_blank">GitHub</a> |
+                    <a href="https://colab.research.google.com/..." target="_blank">Colab Demo</a>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card llm nlp" data-aos="fade-up">
+                <h3>🤖 RAG QA for Earnings Calls</h3>
+                <img src="./assets/projects/rl-agent.png" alt="RL Agent" class="project-thumbnail" />
+                <p>Built a LangChain-based agent to answer earnings call questions using hybrid search (FAISS + OpenAI).
+                </p>
+                <ul>
+                    <li><strong>Stack:</strong> LangChain, OpenAI API, FAISS, Streamlit</li>
+                    <li><strong>Demo:</strong> Answer accuracy ~89% on 20 test queries</li>
+                </ul>
+                <div class="project-links">
+                    <a href="https://github.com/helloapricity/earnings-rag-agent" target="_blank">GitHub</a>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card rl quant" data-aos="fade-up">
+                <h3>📈 RL for Portfolio Optimization</h3>
+                <img src="./assets/projects/rl-agent.png" alt="RL Agent" class="project-thumbnail" />
+                <p>Trained PPO and DDPG agents to allocate assets in synthetic markets with Gym environments.</p>
+                <ul>
+                    <li><strong>Stack:</strong> Stable-Baselines3, PyTorch, Gym, NumPy</li>
+                    <li><strong>Reward:</strong> Sharpe Ratio ↑ 12% vs baseline strategy</li>
+                </ul>
+                <div class="project-links">
+                    <a href="https://github.com/helloapricity/rl-portfolio" target="_blank">GitHub</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="publications">
+        <h2>📚 Publications</h2>
+
+        <div class="publication-card" data-aos="fade-up">
+            <h3>The Impact of Varying Knowledge on Question-Answering System</h3>
+            <p><strong>Authors:</strong> Anh Thach Ha Nguyen, Trung Nguyen, et al.</p>
+            <p><strong>Published at:</strong> 2024 Asian Conference on Communication and Networks (ASIANComNet), IEEE
+            </p>
+            <p><strong>Summary:</strong> Proposed a knowledge-based question answering system using DPR and
+                Fusion-in-Decoder (FiD) architecture to enhance response quality and reduce hallucination. Evaluated on
+                ELI5, MS MARCO, and MASH-QA datasets.</p>
+            <a href="./assets/The_Impact_of_Varying_Knowledge_on_Question-Answering_System.pdf" target="_blank">📄 View
+                Full Paper (PDF)</a>
+            <br />
+            <small>DOI: <a href="https://doi.org/10.1109/ASIANComNet63184.2024.10811070"
+                    target="_blank">10.1109/ASIANComNet63184.2024.10811070</a></small>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>📬 Contact Me</h2>
+
+        <div class="contact-info">
+            <p>Email: <a href="mailto:anhthachhanguyen.contact@gmail.com">anhthachhanguyen.contact@gmail.com</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/helloapricity/" target="_blank">/helloapricity</a></p>
+            <p>GitHub: <a href="https://github.com/helloapricity" target="_blank">/helloapricity</a></p>
+        </div>
+
+        <form id="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input type="email" name="email" placeholder="Your Email" required />
+            <input type="text" name="title" placeholder="Subject" required />
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+        <p id="form-status"></p>
+
+    </section>
+
+    <blockquote class="quote">
+        "I believe in building intelligent systems that learn from real-world data and generate measurable impact."
+    </blockquote>
+
+    <footer class="site-footer" id="contact">
+        <p>📬 Contact me at: <a href="mailto:anhthachhanguyen.contact@gmail.com">anhthachhanguyen.contact@gmail.com</a>
+        </p>
+        <p>
+            <a href="https://www.linkedin.com/in/helloapricity/" target="_blank">LinkedIn</a> |
+            <a href="https://github.com/helloapricity" target="_blank">GitHub</a>
+        </p>
+        <p>© 2025 Anh Thach Ha Nguyen. All rights reserved.</p>
+    </footer>
+
+    <!-- EmailJS SDK v4 -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "kvysQUBytVR5PTUNL",
+            });
+        })();
+    </script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
