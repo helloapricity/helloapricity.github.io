@@ -35,63 +35,57 @@ document.getElementById("contact-form").addEventListener("submit", function (e) 
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  const typewriter = document.getElementById('typewriter');
-  const phrases = [
-    "AI Researcher | Quant Developer | LLM Enthusiast",
-    "Building agents for finance ⚙️📈",
-    "Transforming data into decisions 🚀"
-  ];
+    const typewriter = document.getElementById('typewriter');
+    const phrases = [
+        "AI Researcher | Quant Developer | LLM Enthusiast",
+        "Building agents for finance ⚙️📈",
+        "Transforming data into decisions 🚀"
+    ];
 
-  let phraseIndex = 0;
-  let charIndex = 0;
+    let phraseIndex = 0;
+    let charIndex = 0;
 
-  function type() {
-    if (charIndex < phrases[phraseIndex].length) {
-      typewriter.innerHTML += phrases[phraseIndex].charAt(charIndex);
-      charIndex++;
-      setTimeout(type, 60);
-    } else {
-      setTimeout(erase, 1500);
+    function type() {
+        if (charIndex < phrases[phraseIndex].length) {
+            typewriter.innerHTML += phrases[phraseIndex].charAt(charIndex);
+            charIndex++;
+            setTimeout(type, 60);
+        } else {
+            setTimeout(erase, 1500);
+        }
     }
-  }
 
-  function erase() {
-    if (charIndex > 0) {
-      typewriter.innerHTML = phrases[phraseIndex].substring(0, charIndex - 1);
-      charIndex--;
-      setTimeout(erase, 40);
-    } else {
-      phraseIndex = (phraseIndex + 1) % phrases.length;
-      setTimeout(type, 500);
+    function erase() {
+        if (charIndex > 0) {
+            typewriter.innerHTML = phrases[phraseIndex].substring(0, charIndex - 1);
+            charIndex--;
+            setTimeout(erase, 40);
+        } else {
+            phraseIndex = (phraseIndex + 1) % phrases.length;
+            setTimeout(type, 500);
+        }
     }
-  }
 
-  type();
+    type();
 });
 
 // Dark mode toggle
 const toggleBtn = document.getElementById('dark-mode-toggle');
 const body = document.body;
 
-toggleBtn.addEventListener('click', () => {
-  body.classList.toggle('dark');
-  toggleBtn.textContent = body.classList.contains('dark') ? '☀️' : '🌙';
-});
-
-// Toggle Dark Mode + Save to localStorage
-
+// Áp dụng dark mode nếu có trong localStorage
 if (localStorage.getItem("theme") === "dark") {
     body.classList.add("dark");
-    toggle.textContent = "☀️";
+    toggleBtn.textContent = "☀️";
 }
 
-toggle.addEventListener("click", () => {
+toggleBtn.addEventListener("click", () => {
     body.classList.toggle("dark");
     if (body.classList.contains("dark")) {
         localStorage.setItem("theme", "dark");
-        toggle.textContent = "☀️";
+        toggleBtn.textContent = "☀️";
     } else {
         localStorage.setItem("theme", "light");
-        toggle.textContent = "🌙";
+        toggleBtn.textContent = "🌙";
     }
 });
