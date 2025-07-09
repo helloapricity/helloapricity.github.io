@@ -396,7 +396,7 @@ form#contact-form button:hover {
 }
 
 .typewriter-wrapper {
-  height: 1.5em;
+  min-height: 1.5em; 
   display: flex;
   justify-content: center;
   align-items: center;

@@ -1,17 +1,3 @@
-const text = "AI Researcher | Quant Developer | LLM Enthusiast";
-const target = document.getElementById("typewriter");
-let index = 0;
-
-function type() {
-    if (index < text.length) {
-        target.innerHTML += text.charAt(index);
-        index++;
-        setTimeout(type, 50);
-    }
-}
-
-type();
-
 const filterButtons = document.querySelectorAll(".filter-btn");
 const projectCards = document.querySelectorAll(".project-card");
 
